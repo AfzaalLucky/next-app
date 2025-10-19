@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #062E39;
+  --secondary-color: #F4F5F9;
+  --text-color: #565969;
+  --heading-color: #090B1F;
+  --white-color: #FFFFFF;
+  --border-color: #E5E7F2;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--heading-color);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-default {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-highlighted {
+  background-color: #FF6B35;
+  border-color: #FF6B35;
+}
+
+.btn-highlighted:hover {
+  background-color: transparent;
+  color: #FF6B35;
+}
+
+.section-title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF6B35;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.section-title p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
